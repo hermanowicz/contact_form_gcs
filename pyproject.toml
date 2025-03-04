@@ -1,0 +1,14 @@
+[project]
+name = "contact-form-gcs"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "bottle>=0.13.2",
+    "google-cloud-storage>=3.1.0",
+    "gunicorn>=23.0.0",
+    "itsdangerous>=2.2.0",
+    "loguru>=0.7.3",
+    "tinydb>=4.8.2",
+]
