@@ -11,6 +11,6 @@ if PORT == None:
 @route("/")
 def index():
     logger.info(f"index page request, accepted at: {datetime.datetime.now()}")
-    return "Hello, world"
+    return template("index")
 
 run(host='0.0.0.0', server='gunicorn', port=str(PORT))
