@@ -19,21 +19,6 @@ def index():
     logger.info(f"request to: {request.path}, from: {request.remote_addr}")
     return template("index")
 
-@route("/cloud")
-def index():
-    logger.info(f"request to: {request.path}, from: {request.remote_addr}")
-    return template("cloud")
-
-@route("/ai-agents")
-def index():
-    logger.info(f"request to: {request.path}, from: {request.remote_addr}")
-    return template("ai-agents")
-
-@route("/dev-ops")
-def index():
-    logger.info(f"request to: {request.path}, from: {request.remote_addr}")
-    return template("dev-ops")
-
 @route("/contact")
 def index():
     logger.info(f"request to: {request.path}, from: {request.remote_addr}")
