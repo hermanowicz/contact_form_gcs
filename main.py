@@ -10,7 +10,34 @@ if PORT == None:
 
 @route("/")
 def index():
-    logger.info(f"index page request, accepted at: {datetime.datetime.now()}")
+    logger.info(f"request to: {request.path}, from: {request.remote_addr}")
     return template("index")
 
-run(host='0.0.0.0', server='gunicorn', port=str(PORT))
+@route("/cloud")
+def index():
+    logger.info(f"request to: {request.path}, from: {request.remote_addr}")
+    return template("index")
+
+@route("/ai-agents")
+def index():
+    logger.info(f"request to: {request.path}, from: {request.remote_addr}")
+    return template("index")
+
+@route("/dev-ops")
+def index():
+    logger.info(f"request to: {request.path}, from: {request.remote_addr}")
+    return template("index")
+
+@route("/contact")
+def index():
+    logger.info(f"request to: {request.path}, from: {request.remote_addr}")
+    return template("index")
+
+@route("/privacy-policy")
+def index():
+    logger.info(f"request to: {request.path}, from: {request.remote_addr}")
+    return template("index")
+
+
+
+run(host='0.0.0.0', server='gunicorn', port=str(PORT), reloader=True)
