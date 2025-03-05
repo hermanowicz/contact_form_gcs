@@ -13,5 +13,6 @@
         {{!base}}
     </div>
 
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 </body>
 </html>

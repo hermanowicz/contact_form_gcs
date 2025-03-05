@@ -22,27 +22,27 @@ def index():
 @route("/cloud")
 def index():
     logger.info(f"request to: {request.path}, from: {request.remote_addr}")
-    return template("index")
+    return template("cloud")
 
 @route("/ai-agents")
 def index():
     logger.info(f"request to: {request.path}, from: {request.remote_addr}")
-    return template("index")
+    return template("ai-agents")
 
 @route("/dev-ops")
 def index():
     logger.info(f"request to: {request.path}, from: {request.remote_addr}")
-    return template("index")
+    return template("dev-ops")
 
 @route("/contact")
 def index():
     logger.info(f"request to: {request.path}, from: {request.remote_addr}")
-    return template("index")
+    return template("contact")
 
 @route("/privacy-policy")
 def index():
     logger.info(f"request to: {request.path}, from: {request.remote_addr}")
-    return template("index")
+    return template("privacy-policy")
 
 
 
