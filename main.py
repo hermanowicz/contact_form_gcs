@@ -2,11 +2,17 @@ from bottle import route, run, request, template
 from itsdangerous import URLSafeSerializer
 from loguru import logger
 from os import getenv
-import datetime
+import secrets
 
-PORT = getenv('PORT')
-if PORT == None:
-    PORT = 8080
+# vars for files, buckets, etc ...
+
+SECRET = secrets.token_urlsafe(48)
+BUCKET = "contact-form-app"
+DB_FILE = "contacts.json"
+LOCAL = "/tmp/" + DB_FILE
+
+# config for itsdangerous,
+s = URLSafeSerializer(SECRET, "just-for-fun")
 
 @route("/")
 def index():
@@ -40,4 +46,4 @@ def index():
 
 
 
-run(host='0.0.0.0', server='gunicorn', port=str(PORT), reloader=True)
+run(host='0.0.0.0', debug=True, reloader=True)
