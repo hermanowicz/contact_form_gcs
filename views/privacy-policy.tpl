@@ -31,6 +31,12 @@
     </section>
 
     <section>
+        <h3>Cookies</h3>
+        <p>Site uses cookies to protect sessions from third parties trying to spy and hack</p>
+        <p>Cookies don't have any tracking & marketing usage.</p>
+    </section>
+
+    <section>
         <h3>Data Retention</h3>
         <p>Data collected by the App will be retained for the duration of the POC, which is expected to be 3 months.
             After the POC is completed, all data will be deleted.</p>
