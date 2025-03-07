@@ -20,9 +20,11 @@ def index():
     return template("index")
 
 @route("/contact")
-def index():
-    logger.info(f"request to: {request.path}, from: {request.remote_addr}")
-    return template("contact")
+def contact():
+    if request.method == "POST":
+        logger.info(f"form post to: {request.path}, from: {request.remote_addr} was made.")
+    else:
+        return template("contact")
 
 @route("/privacy-policy")
 def index():
